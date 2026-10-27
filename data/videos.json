@@ -1,0 +1,88 @@
+{
+  "categories": [
+    {
+      "id": "installers",
+      "title": "Installers",
+      "description": "Installation walkthroughs for AI tools, SDKs, and development environments.",
+      "icon": "download",
+      "videos": [
+        {
+          "id": "python-installation",
+          "title": "Python Installation Guide",
+          "description": "Add your YouTube video ID and publish a step-by-step Python installation walkthrough.",
+          "youtubeId": "",
+          "tags": [
+            "Python",
+            "Installation"
+          ],
+          "order": 1
+        },
+        {
+          "id": "crewai-installation",
+          "title": "CrewAI Installation",
+          "description": "Add your YouTube video ID for the CrewAI installation tutorial.",
+          "youtubeId": "",
+          "tags": [
+            "CrewAI",
+            "Installation"
+          ],
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "setup",
+      "title": "Setup",
+      "description": "Configuration tutorials for API keys, environment variables, and SDK projects.",
+      "icon": "settings-2",
+      "videos": [
+        {
+          "id": "gemini-api-setup",
+          "title": "Google Gemini API Setup",
+          "description": "Learn how to create a Gemini API key and configure it for your AI projects.",
+          "category": "setup",
+          "youtubeId": "z9XJ3g7bLds",
+          "duration": "05:30",
+          "tags": ["Gemini", "API", "Setup"]
+        },
+       {
+         "id": "groq-api-setup",
+         "title": "Groq API Setup",
+          "description": "Learn how to obtain and configure a Groq API key.",
+          "category": "setup",
+          "youtubeId": "fQzv0du_pEY",
+          "duration": "04:45",
+          "tags": ["Groq", "API", "Setup"]
+       },
+       {
+  "id": "install-requirements-txt",
+  "title": "How to Install requirements.txt",
+  "description": "Learn how to install all Python project dependencies using the requirements.txt file.",
+  "category": "setup",
+  "youtubeId": "X8uWW5W3o_M",
+  "duration": "05:30",
+  "tags": ["Python", "Requirements", "Dependencies", "Installation"]
+},
+{
+  "id": "openrouter-api-setup",
+  "title": "How to Generate an OpenRouter API Key",
+  "description": "Learn how to generate an OpenRouter API key and configure it for your AI applications.",
+  "category": "setup",
+  "youtubeId": "ln29dlyWQNg",
+  "duration": "04:45",
+  "tags": ["OpenRouter", "API Key", "AI", "Setup"]
+},
+{
+  "id": "nvidia-api-setup",
+  "title": "How to Generate an NVIDIA API Key",
+  "description": "Learn how to obtain an NVIDIA API key and configure it for AI model integration.",
+  "category": "setup",
+  "youtubeId": "cfPloIzrtME",
+  "duration": "05:00",
+  "tags": ["NVIDIA", "API Key", "AI Models", "Setup"]
+}
+
+      ]
+    }
+  ]
+}
