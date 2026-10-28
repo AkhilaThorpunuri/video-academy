@@ -84,5 +84,90 @@
 
       ]
     }
+    ,
+{
+  "id": "roadmaps",
+  "title": "Roadmaps",
+  "description": "Explore structured learning roadmaps, skill paths, and career development plans.",
+  "icon": "map",
+  "videos": []
+},
+{
+  "id": "ai-learning-videos",
+  "title": "AI Learning Videos",
+  "description": "Learn artificial intelligence concepts, tools, models, and practical applications.",
+  "icon": "brain",
+  "videos": []
+},
+{
+  "id": "vibe-coding",
+  "title": "Vibe Coding",
+  "description": "Learn to build applications using AI-assisted coding workflows.",
+  "icon": "code",
+  "videos": []
+},
+{
+  "id": "web-development-ai",
+  "title": "Web Development with AI",
+  "description": "Explore frontend development, web technologies, and AI-powered website creation.",
+  "icon": "globe",
+  "videos": []
+},
+{
+  "id": "application-development-ai",
+  "title": "Application Development with AI",
+  "description": "Learn to design and develop applications using AI tools and frameworks.",
+  "icon": "blocks",
+  "videos": [
+    {
+      "id": "ai-app-development-introduction",
+      "title": "Introduction to AI Application Development",
+      "description": "Understand the fundamentals of building applications with AI.",
+      "youtubeId": "YOUR_VIDEO_ID_1",
+      "duration": "08:30",
+      "tags": ["AI", "Application Development"],
+      "order": 1
+    },
+    {
+      "id": "building-ai-applications",
+      "title": "Building AI-Powered Applications",
+      "description": "Explore the workflow for developing applications using AI models and APIs.",
+      "youtubeId": "YOUR_VIDEO_ID_2",
+      "duration": "12:00",
+      "tags": ["AI Applications", "Development"],
+      "order": 2
+    },
+    {
+      "id": "ai-app-deployment",
+      "title": "Deploying AI Applications",
+      "description": "Learn the fundamentals of deploying an AI-powered application.",
+      "youtubeId": "YOUR_VIDEO_ID_3",
+      "duration": "10:00",
+      "tags": ["Deployment", "AI"],
+      "order": 3
+    }
+  ]
+},
+{
+  "id": "data-engineering-local-stack",
+  "title": "Data Engineering Local stack",
+  "description": "Explore local data engineering tools, pipelines, databases, and workflows.",
+  "icon": "database",
+  "videos": []
+},
+{
+  "id": "interview-prep",
+  "title": "Interview Prep",
+  "description": "Prepare for technical interviews with practice questions and learning resources.",
+  "icon": "graduation-cap",
+  "videos": []
+},
+{
+  "id": "communication-skills",
+  "title": "Comm Skill",
+  "description": "Improve communication, presentation, and professional skills.",
+  "icon": "messages-square",
+  "videos": []
+}
   ]
 }

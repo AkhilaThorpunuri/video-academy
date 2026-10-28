@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f8fafc">
   <title>Video Academy | Tinitiate AI</title>
-  <meta name="description" content="Watch installation and setup tutorials for AI developer tools in the Tinitiate AI Video Academy.">
+  <meta name="description" content="TINITIATE AI Video Academy tutorials and learning resources.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -95,6 +95,18 @@
       border-radius: var(--radius-sm); font-size: .82rem; font-weight: 650; cursor: pointer; transition: .18s ease;
     }
     .nav-link:hover, .icon-btn:hover { color: var(--text); background: var(--surface-soft); border-color: var(--border); }
+    .subjects-menu { position: relative; }
+    .subjects-trigger { color: inherit; }
+    .subjects-dropdown { position: absolute; top: calc(100% + 12px); left: 0; width: min(330px, 88vw); max-height: min(70vh, 520px); overflow-y: auto; padding: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 18px 48px rgba(15,23,42,.2); z-index: 50; }
+    .subjects-dropdown[hidden] { display: none; }
+    .subject-group { border-bottom: 1px solid var(--border); padding: 5px 0; }
+    .subject-group:last-child { border-bottom: 0; }
+    .subject-main { display: flex; align-items: center; justify-content: space-between; width: 100%; border: 0; border-radius: 8px; padding: 10px 11px; background: var(--surface-soft); color: var(--text); font-weight: 800; text-align: left; cursor: pointer; }
+    .subject-main:hover, .subject-topic:hover { background: var(--purple-soft); color: var(--purple); }
+    .subject-topics { padding: 5px 0 2px 10px; }
+    .subject-topic { display: block; width: 100%; padding: 8px 10px; border: 0; border-radius: 7px; background: transparent; color: var(--muted); text-align: left; font-size: .82rem; cursor: pointer; }
+    .subject-topic::before { content: "↳"; margin-right: 8px; color: var(--purple); }
+    .subject-empty { padding: 9px 12px; color: var(--dim); font-size: .8rem; }
     .nav-actions { margin-left: auto; display: flex; align-items: center; gap: 8px; }
     .search-trigger { border: 1px solid var(--border); background: var(--surface-soft); color: var(--muted); border-radius: 10px; padding: 8px 12px; display: flex; gap: 8px; align-items: center; cursor: pointer; font-size: .82rem; }
     .search-trigger kbd { font: .68rem var(--mono); padding: 2px 5px; border: 1px solid var(--border-strong); border-radius: 4px; }
@@ -199,7 +211,9 @@
     @media (max-width: 1000px) { .video-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .player-layout { grid-template-columns: 1fr; } .nav-links { margin-left: 0; } }
     @media (max-width: 720px) {
       .nav-inner { padding: 9px 14px; gap: 10px; flex-wrap: wrap; }
-      .brand-badge, .nav-links { display: none; }
+      .brand-badge { display: none; }
+      .nav-links { display: flex; order: 3; width: 100%; }
+      .subjects-dropdown { left: 0; }
       .nav-actions { margin-left: auto; }
       .search-trigger span, .search-trigger kbd { display: none; }
       .hero { padding: 40px 16px 28px; }
@@ -300,7 +314,115 @@
     @media(max-width:640px){.nav-inner{min-height:66px;padding:10px 12px}.brand-logo{width:155px;max-width:48vw;height:38px}.brand-badge{font-size:.52rem;padding:3px 5px}.search-trigger{padding:8px}.search-trigger span,.search-trigger kbd{display:none}.showcase{padding:18px 18px 14px}.showcase-track{min-height:565px}.showcase-slide{grid-template-columns:1fr;align-content:start;gap:0}.showcase-copy{padding:24px 0 0}.showcase-copy h1{font-size:clamp(2.4rem,11vw,3.5rem)}.showcase-copy p{font-size:.9rem}.showcase-visual{min-height:220px;margin-top:2px}.visual-orbit-number{font-size:4rem}.showcase-bottom{flex-wrap:wrap;gap:10px}.showcase-progress{order:3;max-width:none;flex-basis:100%}.showcase-controls{margin-left:auto}.showcase-timer-label{font-size:.56rem}.hero-summary{width:calc(100% - 28px);padding:18px}.hero-summary-stats{gap:10px}.hero-summary-stats span{font-size:.62rem}.hero-summary-stats strong{font-size:1rem}}
     @media(prefers-reduced-motion:reduce){.showcase-slide,.showcase-progress span,.visual-final .final-ring{transition:none;animation:none}html{scroll-behavior:auto}}
 
-  </style>
+
+    .page-wrap{width:min(1300px,calc(100% - 48px));margin:28px auto 48px}.page-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:22px}.page-heading h1{margin:6px 0;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.045em}.page-heading p{margin:0;color:var(--muted);max-width:760px;line-height:1.7}.breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;color:var(--muted);font-size:.78rem;margin-bottom:16px}.breadcrumbs a{color:var(--purple);text-decoration:none}.lesson-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.lesson-card{display:block;text-align:left;text-decoration:none;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:var(--shadow);transition:transform .2s,border-color .2s}.lesson-card:hover{transform:translateY(-3px);border-color:var(--purple)}.lesson-card .card-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--surface-soft);color:var(--purple);margin-bottom:14px}.lesson-card h2{font-size:1.03rem;line-height:1.4;margin:0 0 8px}.lesson-card p{font-size:.84rem;line-height:1.65;color:var(--muted);margin:0 0 14px}.card-meta{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:.72rem}.pill{border:1px solid var(--border);background:var(--surface-soft);padding:4px 8px;border-radius:999px}.lesson-layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(260px,.8fr);gap:20px;align-items:start}.lesson-panel,.lesson-sidebar{border:1px solid var(--border);border-radius:14px;background:var(--surface);box-shadow:var(--shadow);overflow:hidden}.lesson-video{aspect-ratio:16/9;background:#080711;display:grid;place-items:center}.lesson-video iframe{width:100%;height:100%;border:0}.lesson-video-placeholder{color:#cbd5e1;text-align:center;padding:25px}.lesson-content{padding:22px}.lesson-content h1{margin:10px 0;font-size:clamp(1.5rem,3vw,2.3rem);letter-spacing:-.04em}.lesson-content p{color:var(--muted);line-height:1.75}.lesson-content h2{margin-top:24px;font-size:1.12rem}.lesson-content pre{overflow:auto;padding:16px;border:1px solid var(--border);border-radius:10px;background:var(--surface-soft);font-family:var(--mono);font-size:.82rem}.lesson-sidebar{padding:18px}.lesson-sidebar h2{margin:0 0 12px;font-size:1rem}.lesson-nav-list{display:grid;gap:8px}.lesson-nav-item{display:block;text-decoration:none;color:var(--text);padding:10px 12px;border:1px solid var(--border);border-radius:9px;font-size:.82rem;line-height:1.45}.lesson-nav-item.active,.lesson-nav-item:hover{border-color:var(--purple);background:var(--surface-soft);color:var(--purple)}.lesson-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.empty-state{padding:28px;border:1px dashed var(--border);border-radius:12px;color:var(--muted);text-align:center}.btn-link{display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+    @media(max-width:900px){.lesson-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lesson-layout{grid-template-columns:1fr}.page-wrap{width:calc(100% - 32px)}}@media(max-width:600px){.lesson-grid{grid-template-columns:1fr}.page-wrap{width:calc(100% - 24px)}.page-heading{align-items:flex-start;flex-direction:column}}
+
+
+    /* Subjects mega-menu: centered and sized to keep all subject panels inside the viewport. */
+    .subjects-menu { position: relative; }
+    .subjects-dropdown {
+      position: fixed;
+      top: 98px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1160px, calc(100vw - 32px));
+      max-width: calc(100vw - 32px);
+      max-height: calc(100vh - 116px);
+      overflow-x: hidden;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 10px;
+      padding: 14px;
+      box-sizing: border-box;
+      background: #100b20;
+      color: #e8e5f4;
+      border: 1px solid rgba(168, 85, 247, .42);
+      border-radius: 16px;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, .48);
+      z-index: 1000;
+      scrollbar-color: #76558f #211a32;
+      scrollbar-width: thin;
+    }
+    .subjects-dropdown[hidden] { display: none; }
+    .subjects-menu-heading, .subjects-menu-footer { grid-column: 1 / -1; min-width: 0; }
+    .subjects-menu-heading { padding: 3px 5px 12px; border-bottom: 1px solid rgba(168, 85, 247, .18); }
+    .subjects-menu-heading .menu-kicker { color: #c084fc; font-size: .65rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .subjects-menu-heading .menu-title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 5px; }
+    .subjects-menu-heading strong { font-size: .9rem; }
+    .subjects-menu-heading .menu-summary { padding: 5px 9px; border: 1px solid rgba(148,163,184,.2); border-radius: 999px; color: #cbd5e1; font-size: .68rem; white-space: nowrap; }
+    .subject-group {
+      min-width: 0;
+      padding: 10px 9px;
+      border: 1px solid rgba(148, 163, 184, .12);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .025);
+    }
+    .subject-main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 7px;
+      width: 100%;
+      min-width: 0;
+      min-height: 32px;
+      padding: 3px 0 9px;
+      border: 0;
+      border-bottom: 1px solid rgba(148, 163, 184, .14);
+      border-radius: 0;
+      background: transparent;
+      color: #22d3ee;
+      font-size: .7rem;
+      font-weight: 850;
+      text-align: left;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .subject-main-label { display: flex; align-items: center; gap: 6px; min-width: 0; }
+    .subject-main-label span { overflow-wrap: anywhere; }
+    .subject-count { flex: 0 0 auto; padding: 4px 6px; border-radius: 7px; background: rgba(148,163,184,.12); color: #aeb8ca; font-size: .61rem; font-weight: 750; text-transform: none; }
+    .subject-main:hover, .subject-topic:hover { color: #c084fc; }
+    .subject-topics { display: grid; gap: 2px; padding-top: 7px; min-width: 0; }
+    .subject-topic { display: flex; align-items: center; gap: 7px; min-width: 0; padding: 7px 2px; border-radius: 6px; color: #d3d0e0; text-decoration: none; font-size: .69rem; font-weight: 650; line-height: 1.35; }
+    .subject-topic::before { content: "›"; flex: 0 0 auto; color: #85809a; font-size: 1rem; }
+    .subject-topic-label { display: block; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .subject-topic-icon { display: grid; place-items: center; flex: 0 0 23px; width: 23px; height: 23px; border-radius: 7px; background: rgba(148,163,184,.1); color: #c4bfd8; }
+    .subject-empty { padding: 8px 2px; color: #8f8aa4; font-size: .68rem; line-height: 1.5; }
+    .subjects-menu-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 12px; padding: 10px 5px 0; border-top: 1px solid rgba(168, 85, 247, .18); color: #a8a2bd; font-size: .68rem; }
+    @media (max-width: 1100px) {
+      .subjects-dropdown { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+    @media (max-width: 760px) {
+      .subjects-dropdown { top: 88px; grid-template-columns: repeat(2, minmax(0, 1fr)); width: calc(100vw - 20px); max-width: calc(100vw - 20px); max-height: calc(100vh - 100px); padding: 10px; gap: 8px; }
+      .subjects-menu-heading .menu-title-row { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 420px) {
+      .subjects-dropdown { top: 82px; grid-template-columns: minmax(0, 1fr); width: calc(100vw - 16px); max-width: calc(100vw - 16px); max-height: calc(100vh - 90px); }
+      .subjects-menu-footer { flex-direction: column; }
+    }
+  
+/* Global search dialog */
+.video-search-overlay[hidden]{display:none!important}
+.video-search-overlay{position:fixed;inset:0;z-index:1000;background:rgba(4,6,15,.72);backdrop-filter:blur(8px);display:flex;align-items:flex-start;justify-content:center;padding:10vh 18px 24px}
+.video-search-dialog{width:min(760px,100%);max-height:80vh;overflow:hidden;background:var(--surface);color:var(--text);border:1px solid var(--border-strong);border-radius:18px;box-shadow:0 28px 90px rgba(0,0,0,.4);display:flex;flex-direction:column}
+.video-search-top{padding:18px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px}
+.video-search-top input{min-width:0;flex:1;border:1px solid var(--border-strong);border-radius:11px;background:var(--surface-soft);color:var(--text);padding:12px 14px;outline:none}
+.video-search-top input:focus{border-color:var(--purple);box-shadow:0 0 0 3px var(--purple-soft)}
+.video-search-close{border:1px solid var(--border);background:var(--surface-soft);color:var(--text);border-radius:9px;padding:9px 12px;cursor:pointer}
+.video-search-results{overflow:auto;padding:10px;display:grid;gap:7px}
+.video-search-result{display:flex;align-items:flex-start;gap:12px;padding:12px;border:1px solid transparent;border-radius:11px;text-decoration:none;color:inherit}
+.video-search-result:hover,.video-search-result:focus{background:var(--surface-hover);border-color:var(--border);outline:none}
+.video-search-result-icon{width:36px;height:36px;flex:0 0 36px;display:grid;place-items:center;border-radius:10px;background:var(--purple-soft);color:var(--purple)}
+.video-search-result strong{display:block;font-size:.92rem;margin-bottom:3px}
+.video-search-result small{display:block;color:var(--muted);font-size:.78rem;line-height:1.45}
+.video-search-empty{padding:26px 16px;text-align:center;color:var(--muted);font-size:.9rem}
+.video-search-count{padding:0 18px 12px;color:var(--dim);font-size:.75rem}
+html[data-theme="dark"] .video-search-dialog{background:var(--surface)}
+@media(max-width:600px){.video-search-overlay{padding:7vh 10px 12px}.video-search-top{padding:12px}.video-search-dialog{max-height:86vh}}
+
+</style>
 </head>
 <body>
   <div class="ambient-glow glow-one" aria-hidden="true"></div>
@@ -314,9 +436,14 @@
           <span class="brand-badge">Video Academy</span>
         </a>
         <nav class="nav-links" aria-label="Main navigation">
-          <a class="nav-link" href="#home"><i data-lucide="house" width="15" height="15"></i>Home</a>
-          <a class="nav-link" href="#categories"><i data-lucide="layout-grid" width="15" height="15"></i>Categories</a>
-          <a class="nav-link" href="#video-library"><i data-lucide="clapperboard" width="15" height="15"></i>Video Library</a>
+          <a class="nav-link" href="./index.html"><i data-lucide="house" width="15" height="15"></i>Home</a>
+          <div class="subjects-menu" id="subjectsMenu">
+            <button class="nav-link subjects-trigger" id="subjectsTrigger" type="button" aria-haspopup="true" aria-expanded="false">
+              <i data-lucide="book-open" width="15" height="15"></i>Subjects <i data-lucide="chevron-down" width="14" height="14"></i>
+            </button>
+            <div class="subjects-dropdown" id="subjectsDropdown" hidden aria-label="Subjects and video topics"></div>
+          </div>
+          <a class="nav-link" href="./pages/subject.html?view=all"><i data-lucide="clapperboard" width="15" height="15"></i>Video Library</a>
         </nav>
         <div class="nav-actions">
           <button class="search-trigger" id="focusSearch" type="button" aria-label="Search videos"><i data-lucide="search" width="16" height="16"></i><span>Search videos</span><kbd> / </kbd></button>
@@ -324,7 +451,6 @@
         </div>
       </div>
     </header>
-
     <main id="main-content">
       <section class="showcase" id="home" aria-label="Tinitiate AI Video Academy highlights">
         <div class="showcase-grid" aria-hidden="true"></div>
@@ -341,7 +467,7 @@
               <h1>From <em>Setup</em><br>to <em>Building.</em></h1>
               <p>Learn the tools behind modern AI development through focused, practical video tutorials from Tinitiate AI.</p>
               <div class="showcase-pills"><span>Self-paced learning</span><span>Practical walkthroughs</span><span>Revisit anytime</span></div>
-              <a class="showcase-cta" href="#categories">Explore the academy <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
+              <a class="showcase-cta" href="./pages/subject.html?category=installers">Explore the academy <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
             </div>
             <div class="showcase-visual visual-terminal">
               <div class="visual-window"><div class="window-dots"><i></i><i></i><i></i><span>terminal · setup</span></div><pre><b>PS C:\\video-academy&gt;</b> python --version
@@ -359,7 +485,7 @@ Python 3.13.x
               <h1>Start with the<br><em>right environment.</em></h1>
               <p>Follow clear installation walkthroughs for Python, virtual environments, packages, and the tools used throughout the masterclasses.</p>
               <div class="showcase-pills"><span>Python setup</span><span>Dependencies</span><span>CLI tools</span></div>
-              <a class="showcase-cta" href="#video-library" data-hero-filter="installers">Browse installer videos <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
+              <a class="showcase-cta" href="./pages/subject.html?category=installers">Browse installer videos <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
             </div>
             <div class="showcase-visual visual-install"><div class="stack-card stack-back">01 <b>Install</b><small>Prerequisites</small></div><div class="stack-card stack-mid">02 <b>Configure</b><small>Environment</small></div><div class="stack-card stack-front">03 <b>Verify</b><small><span>✓ Ready to run</span></small></div><div class="visual-orbit-number">02<span>INSTALL</span></div></div>
           </article>
@@ -369,7 +495,7 @@ Python 3.13.x
               <h1>Connect your<br><em>AI providers.</em></h1>
               <p>Learn where to create API keys, how to configure environment variables, and how to verify provider access securely.</p>
               <div class="showcase-pills"><span>Gemini</span><span>Claude</span><span>OpenRouter & more</span></div>
-              <a class="showcase-cta" href="#video-library" data-hero-filter="setup">Explore setup tutorials <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
+              <a class="showcase-cta" href="./pages/subject.html?view=all">Explore setup tutorials <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
             </div>
             <div class="showcase-visual visual-api"><div class="api-key-card"><span class="api-status"><i></i> KEY CONFIGURED</span><b>AI_PROVIDER_API_KEY</b><div class="key-mask">••••••••••••••••••••</div><small><i data-lucide="shield-check" width="15" height="15"></i> Keep credentials private</small></div><div class="visual-orbit-number">03<span>SECURE</span></div></div>
           </article>
@@ -379,7 +505,7 @@ Python 3.13.x
               <h1>Build workflows<br>with <em>AI agents.</em></h1>
               <p>Set up CrewAI, understand its project structure, run agent scripts, and inspect execution traces in a guided workflow.</p>
               <div class="showcase-pills"><span>Agents & tasks</span><span>Execution flow</span><span>MLflow basics</span></div>
-              <a class="showcase-cta" href="#video-library">Watch CrewAI tutorials <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
+              <a class="showcase-cta" href="./pages/subject.html?view=all">Watch CrewAI tutorials <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
             </div>
             <div class="showcase-visual visual-flow"><div class="flow-node">Researcher <small>Agent</small></div><div class="flow-link">↓</div><div class="flow-node flow-highlight">Task execution <small>Process</small></div><div class="flow-link">↓</div><div class="flow-node">Result <small>Output</small></div><div class="visual-orbit-number">04<span>AGENTS</span></div></div>
           </article>
@@ -389,7 +515,7 @@ Python 3.13.x
               <h1>Choose your<br><em>agent framework.</em></h1>
               <p>Get started with LangGraph, Strands Agents, and other developer frameworks using repeatable installation and verification steps.</p>
               <div class="showcase-pills"><span>LangGraph</span><span>Strands</span><span>AgentCore</span></div>
-              <a class="showcase-cta" href="#video-library" data-hero-filter="installers">Explore framework installs <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
+              <a class="showcase-cta" href="./pages/subject.html?category=installers">Explore framework installs <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
             </div>
             <div class="showcase-visual visual-framework"><div class="framework-chip">LangGraph <span>✓</span></div><div class="framework-chip">Strands Agents <span>✓</span></div><div class="framework-chip">AgentCore <span>↗</span></div><div class="framework-chip">Claude SDK <span>✓</span></div><div class="visual-orbit-number">05<span>TOOLS</span></div></div>
           </article>
@@ -399,7 +525,7 @@ Python 3.13.x
               <h1>Your first API call.<br><em>Step by step.</em></h1>
               <p>Understand SDK installation, API key configuration, first requests, and the common errors to check when a request fails.</p>
               <div class="showcase-pills"><span>Google Gen AI</span><span>Anthropic SDK</span><span>Verify installation</span></div>
-              <a class="showcase-cta" href="#video-library" data-hero-filter="setup">Learn SDK setup <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
+              <a class="showcase-cta" href="./pages/subject.html?view=all">Learn SDK setup <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
             </div>
             <div class="showcase-visual visual-code"><div class="code-line"><span>01</span><b>from google import genai</b></div><div class="code-line"><span>02</span>client = genai.Client()</div><div class="code-line"><span>03</span>response = client.models.generate_content(...)</div><div class="code-output">✓ SDK request ready</div><div class="visual-orbit-number">06<span>SDK</span></div></div>
           </article>
@@ -409,7 +535,7 @@ Python 3.13.x
               <h1>Install. Verify.<br><em>Run confidently.</em></h1>
               <p>Learn how to read setup errors, validate package versions, resolve environment issues, and confirm your scripts are ready.</p>
               <div class="showcase-pills"><span>Version checks</span><span>Common errors</span><span>Working examples</span></div>
-              <a class="showcase-cta" href="#video-library">Find a walkthrough <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
+              <a class="showcase-cta" href="./pages/subject.html?view=all">Find a walkthrough <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
             </div>
             <div class="showcase-visual visual-checks"><div class="check-row"><i data-lucide="check-circle-2"></i> Python environment <b>PASS</b></div><div class="check-row"><i data-lucide="check-circle-2"></i> Package imports <b>PASS</b></div><div class="check-row"><i data-lucide="check-circle-2"></i> API configuration <b>READY</b></div><div class="visual-orbit-number">07<span>VERIFY</span></div></div>
           </article>
@@ -419,7 +545,7 @@ Python 3.13.x
               <h1>Everything you need<br>to <em>start building.</em></h1>
               <p>Choose a category, play a tutorial, and follow along at your own pace. Your next AI development workflow starts here.</p>
               <div class="showcase-pills"><span>Installers</span><span>Setup guides</span><span>Video library</span></div>
-              <a class="showcase-cta" href="#categories">Start learning now <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
+              <a class="showcase-cta" href="./pages/subject.html?category=installers">Start learning now <i data-lucide="arrow-up-right" width="16" height="16"></i></a>
             </div>
             <div class="showcase-visual visual-final"><div class="final-ring"><i data-lucide="play" width="38" height="38"></i></div><div class="visual-orbit-number">08<span>BUILD</span></div></div>
           </article>
@@ -435,7 +561,6 @@ Python 3.13.x
           <span class="showcase-timer-label">AUTO · 7 SEC</span>
         </div>
       </section>
-
       <section class="hero-summary">
         <div class="hero-summary-copy"><span class="summary-kicker">Tinitiate AI · Video Academy</span><h2>Practical videos for your AI developer journey.</h2><p>Short, focused walkthroughs for installing tools, configuring SDKs, and preparing your development environment.</p></div>
         <div class="hero-summary-stats">
@@ -446,77 +571,11 @@ Python 3.13.x
       </section>
 
       <section class="content-section" id="categories">
-        <div class="section-heading">
-          <div>
-            <div class="section-kicker">Start here</div>
-            <h2><i data-lucide="panels-top-left" width="23" height="23" style="color:var(--purple)"></i> Explore Video Categories</h2>
-            <p>Select a category to browse its video tutorials.</p>
-          </div>
-        </div>
-        <div class="category-grid" id="categoryGrid">
-          <div class="loading-state">Loading categories from the GitHub-managed video catalog…</div>
-        </div>
+        <div class="section-heading"><div><div class="section-kicker">Start here</div><h2><i data-lucide="panels-top-left" width="23" height="23" style="color:var(--purple)"></i> Explore Subjects</h2><p>Choose a subject to view its lessons and learning resources.</p></div></div>
+        <div class="category-grid" id="homeCategories"><div class="loading-state">Loading subjects…</div></div>
       </section>
 
-      <section class="content-section" id="video-library">
-        <div class="section-heading">
-          <div>
-            <div class="section-kicker">Learning library</div>
-            <h2><i data-lucide="clapperboard" width="23" height="23" style="color:var(--cyan)"></i> Video Library</h2>
-            <p id="librarySubtitle">Browse installation and setup tutorials.</p>
-          </div>
-        </div>
-        <div class="toolbar">
-          <label class="search-box">
-            <i data-lucide="search" width="17" height="17"></i>
-            <input class="search-input" id="videoSearch" type="search" placeholder="Search videos, tools, or tags…" autocomplete="off" aria-label="Search videos">
-          </label>
-          <div class="filter-tabs" id="filterTabs" role="group" aria-label="Filter by category">
-            <button class="filter-tab active" type="button" data-filter="all">All videos</button>
-            <button class="filter-tab" type="button" data-filter="installers">Installers</button>
-            <button class="filter-tab" type="button" data-filter="setup">Setup</button>
-          </div>
-        </div>
-        <div class="catalog-meta"><span id="resultCount">Loading video catalog…</span><span>Choose a card to play a video</span></div>
-        <div class="video-grid" id="videoGrid">
-          <div class="loading-state">Loading videos…</div>
-        </div>
-      </section>
-
-      <section class="content-section player-section" id="watch-section" aria-live="polite">
-        <div class="section-heading">
-          <div>
-            <div class="section-kicker">Now playing</div>
-            <h2><i data-lucide="circle-play" width="23" height="23" style="color:var(--purple)"></i> Watch Tutorial</h2>
-            <p>The selected YouTube video plays here inside Video Academy.</p>
-          </div>
-          <button class="btn btn-secondary" id="closePlayer" type="button"><i data-lucide="x" width="15" height="15"></i> Close player</button>
-        </div>
-        <div class="player-layout">
-          <div class="player-main">
-            <div class="player-frame-wrap" id="playerFrame">
-              <div class="player-placeholder"><div><i data-lucide="youtube" width="42" height="42"></i><p>Select a video from the library to begin.</p></div></div>
-            </div>
-            <div class="player-info">
-              <div class="video-tags" id="playingTags"></div>
-              <h2 id="playingTitle">Select a video</h2>
-              <p id="playingDescription">Choose an installer or setup tutorial from the video library.</p>
-            </div>
-          </div>
-          <aside class="player-details">
-            <div class="player-detail-inner">
-              <div class="section-kicker">Video details</div>
-              <h3 id="detailTitle">Ready to learn?</h3>
-              <p id="detailDescription">Select a tutorial to see its details and open the original YouTube page if needed.</p>
-              <div class="detail-row"><i data-lucide="check-circle-2" width="16" height="16"></i><span>Watch the tutorial directly on this page.</span></div>
-              <div class="detail-row"><i data-lucide="external-link" width="16" height="16"></i><span>Open the original YouTube video in a new tab.</span></div>
-              <a class="btn btn-primary youtube-link" id="openYoutube" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i data-lucide="youtube" width="16" height="16"></i> Open on YouTube</a>
-            </div>
-          </aside>
-        </div>
-      </section>
     </main>
-
     <footer class="site-footer">
       <div class="footer-inner">
         <div>
@@ -525,9 +584,8 @@ Python 3.13.x
           <div class="footer-copy" style="margin-top:12px">© <span id="currentYear"></span> Tinitiate AI. All rights reserved.</div>
         </div>
         <div class="footer-links" aria-label="Footer navigation">
-          <a href="#home">Home</a>
-          <a href="#categories">Categories</a>
-          <a href="#video-library">Video Library</a>
+          <a href="./index.html">Home</a>
+          <a href="./pages/subject.html?view=all">Video Library</a>
         </div>
         <div class="footer-contact">
           <h3>Contact TINITIATE AI</h3>
@@ -540,397 +598,150 @@ Python 3.13.x
       </div>
     </footer>
   </div>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script type="module">
+const CATALOG_URL="./data/videos.json";
+const $=s=>document.querySelector(s);
+const icon=(name,size=17)=>`<i data-lucide="${name}" width="${size}" height="${size}"></i>`;
+function refreshIcons(){if(window.lucide)window.lucide.createIcons()}
+async function loadSubjects(){try{const r=await fetch(CATALOG_URL);if(!r.ok)throw new Error("Catalog not found");const data=await r.json();const cats=data.categories||[];const grid=$("#homeCategories");grid.innerHTML=cats.map(c=>`<a class="lesson-card" href="./pages/subject.html?category=${encodeURIComponent(c.id)}"><div class="card-icon">${icon(c.icon||"book-open",22)}</div><h2>${c.title}</h2><p>${c.description||"Browse lessons in this subject."}</p><div class="card-meta"><span class="pill">${(c.videos||[]).length} lessons</span><span class="pill">Explore subject →</span></div></a>`).join("");const dropdown=$("#subjectsDropdown");dropdown.innerHTML=`<div class="subjects-menu-heading"><div class="menu-kicker">TINITIATE AI ACADEMY · ARCHITECTURE CURRICULUM</div><div class="menu-title-row"><strong>Explore learning subjects</strong><span class="menu-summary">${cats.length} Subjects · ${cats.reduce((n,c)=>n+(c.videos||[]).length,0)} Lessons</span></div></div>`+cats.map(c=>`<section class="subject-group"><button class="subject-main" type="button" onclick="location.href='./pages/subject.html?category=${encodeURIComponent(c.id)}'"><span class="subject-main-label">${icon(c.icon||"book-open",13)}<span>${c.title}</span></span><span class="subject-count">${(c.videos||[]).length} ${(c.videos||[]).length===1?"Lesson":"Lessons"}</span></button><div class="subject-topics">${(c.videos||[]).length?(c.videos||[]).map(v=>`<a class="subject-topic" href="./pages/lesson.html?id=${encodeURIComponent(v.id)}"><span class="subject-topic-icon">${icon("play",12)}</span><span class="subject-topic-label">${v.title}</span></a>`).join(""):`<div class="subject-empty">Lessons coming soon</div>`}</div></section>`).join("")+`<div class="subjects-menu-footer"><span>✦ Browse lessons by subject</span><span>TINITIATE AI · Learn. Build. Lead.</span></div>`;refreshIcons()}catch(e){$("#homeCategories").innerHTML='<div class="empty-state">Unable to load subjects. Please check data/videos.json and run the site using a local server.</div>'}}
+const trigger=$("#subjectsTrigger"),dropdown=$("#subjectsDropdown");trigger?.addEventListener("click",()=>{dropdown.hidden=!dropdown.hidden;trigger.setAttribute("aria-expanded",String(!dropdown.hidden))});document.addEventListener("click",e=>{if(!e.target.closest("#subjectsMenu")){if(dropdown)dropdown.hidden=true;if(trigger)trigger.setAttribute("aria-expanded","false")}});$("#currentYear").textContent=new Date().getFullYear();
+const slides=[...document.querySelectorAll(".showcase-slide")],dots=$("#showcaseDots"),counter=$("#showcaseCounter"),progress=$("#showcaseProgress"),pause=$("#showcasePause"),showcase=document.querySelector(".showcase");let idx=0,elapsed=0,last=Date.now(),paused=false;const duration=7000;slides.forEach((s,i)=>{const b=document.createElement("button");b.type="button";b.className="showcase-dot"+(i===0?" is-active":"");b.setAttribute("aria-label",`Show homepage slide ${i+1}`);b.addEventListener("click",()=>show(i));dots.appendChild(b)});function show(n){idx=(n+slides.length)%slides.length;elapsed=0;last=Date.now();slides.forEach((s,i)=>{s.classList.toggle("is-active",i===idx);s.setAttribute("aria-hidden",String(i!==idx))});[...dots.children].forEach((d,i)=>d.classList.toggle("is-active",i===idx));counter.textContent=`${String(idx+1).padStart(2,"0")} / ${String(slides.length).padStart(2,"0")}`;progress.style.width="0%";refreshIcons()}setInterval(()=>{const now=Date.now();if(!paused&&!document.hidden){elapsed+=Math.min(now-last,250);if(elapsed>=duration)show(idx+1);else progress.style.width=`${elapsed/duration*100}%`}last=now},100);$("#showcasePrev")?.addEventListener("click",()=>show(idx-1));$("#showcaseNext")?.addEventListener("click",()=>show(idx+1));pause?.addEventListener("click",()=>{paused=!paused;pause.innerHTML=icon(paused?"play":"pause",16);pause.setAttribute("aria-label",paused?"Resume autoplay":"Pause autoplay");refreshIcons()});showcase?.addEventListener("mouseenter",()=>paused=true);showcase?.addEventListener("mouseleave",()=>paused=false);document.addEventListener("visibilitychange",()=>last=Date.now());refreshIcons();loadSubjects();
+</script>
 
-  <script type="module">
-    const CATALOG_URL = "./data/videos.json";
-    const CATEGORY_PRESENTATION = {
-      installers: {
-        icon: "download",
-        accent: "#7c3aed",
-        glow: "rgba(124,58,237,.11)",
-        action: "Browse installation videos"
-      },
-      setup: {
-        icon: "settings-2",
-        accent: "#0284c7",
-        glow: "rgba(2,132,199,.11)",
-        action: "Browse setup videos"
+<script>
+(function () {
+  "use strict";
+  const root = document.documentElement;
+  const isPagesFolder = /\/pages\//i.test(location.pathname.replace(/\\/g, "/"));
+  const dataUrl = isPagesFolder ? "../data/videos.json" : "./data/videos.json";
+  const lessonUrl = isPagesFolder ? "./lesson.html?id=" : "./pages/lesson.html?id=";
+  const subjectUrl = isPagesFolder ? "./subject.html?category=" : "./pages/subject.html?category=";
+  const allVideosUrl = isPagesFolder ? "./subject.html?view=all" : "./pages/subject.html?view=all";
+  const $ = (selector, scope = document) => scope.querySelector(selector);
+
+  function getSavedTheme() {
+    try { return localStorage.getItem("tinitiate-video-academy-theme"); }
+    catch (_) { return null; }
+  }
+  function applyTheme(theme) {
+    const next = theme === "dark" ? "dark" : "light";
+    root.setAttribute("data-theme", next);
+    root.style.colorScheme = next;
+    const button = $("#themeToggle");
+    if (button) {
+      button.innerHTML = `<i data-lucide="${next === "dark" ? "sun" : "moon"}" width="17" height="17"></i>`;
+      button.setAttribute("aria-label", next === "dark" ? "Switch to light theme" : "Switch to dark theme");
+      button.title = next === "dark" ? "Switch to light theme" : "Switch to dark theme";
+      if (window.lucide) window.lucide.createIcons({root: button});
+    }
+    try { localStorage.setItem("tinitiate-video-academy-theme", next); } catch (_) {}
+  }
+  applyTheme(getSavedTheme() || root.getAttribute("data-theme") || "light");
+  $("#themeToggle")?.addEventListener("click", () => {
+    applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+  });
+
+  // Make Video Library open the complete catalog instead of only the Setup category.
+  document.querySelectorAll('a').forEach((link) => {
+    if (link.textContent.trim().replace(/\s+/g, " ").toLowerCase() === "video library") {
+      link.href = allVideosUrl;
+    }
+  });
+
+  let catalogPromise;
+  function loadCatalog() {
+    if (!catalogPromise) {
+      catalogPromise = fetch(dataUrl).then((response) => {
+        if (!response.ok) throw new Error("Could not load data/videos.json");
+        return response.json();
+      });
+    }
+    return catalogPromise;
+  }
+  function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, (ch) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+  }
+  function createSearchDialog() {
+    let overlay = $("#videoSearchOverlay");
+    if (overlay) return overlay;
+    overlay = document.createElement("div");
+    overlay.className = "video-search-overlay";
+    overlay.id = "videoSearchOverlay";
+    overlay.hidden = true;
+    overlay.innerHTML = `
+      <section class="video-search-dialog" role="dialog" aria-modal="true" aria-label="Search all videos">
+        <div class="video-search-top">
+          <input id="videoSearchInput" type="search" autocomplete="off" placeholder="Search all subjects and videos…" aria-label="Search all subjects and videos">
+          <button type="button" class="video-search-close" id="videoSearchClose">Close <kbd>Esc</kbd></button>
+        </div>
+        <div class="video-search-count" id="videoSearchCount">Type to search the complete video catalog.</div>
+        <div class="video-search-results" id="videoSearchResults"><div class="video-search-empty">Search by title, subject, description, or tag.</div></div>
+      </section>`;
+    document.body.appendChild(overlay);
+    const input = $("#videoSearchInput", overlay);
+    const results = $("#videoSearchResults", overlay);
+    const count = $("#videoSearchCount", overlay);
+    let all = [];
+    loadCatalog().then((catalog) => {
+      all = (catalog.categories || []).flatMap((category) => (category.videos || []).map((video) => ({
+        ...video,
+        categoryId: category.id,
+        categoryTitle: category.title || category.name || category.id,
+        searchable: [video.title, video.description, category.title, category.name, category.id, ...(video.tags || [])].join(" ").toLowerCase()
+      })));
+      if (input.value.trim()) render(input.value);
+    }).catch(() => {
+      count.textContent = "The video catalog could not be loaded.";
+      results.innerHTML = '<div class="video-search-empty">Check that data/videos.json exists and run the site through a local server.</div>';
+    });
+    function render(query) {
+      const q = query.trim().toLowerCase();
+      if (!q) {
+        count.textContent = `${all.length} videos across ${(all.length ? new Set(all.map((v) => v.categoryId)).size : 0)} subjects`;
+        results.innerHTML = '<div class="video-search-empty">Enter a title, topic, subject, description, or tag to search.</div>';
+        return;
       }
+      const matches = all.filter((video) => video.searchable.includes(q));
+      count.textContent = `${matches.length} result${matches.length === 1 ? "" : "s"} for “${query.trim()}”`;
+      results.innerHTML = matches.length ? matches.map((video) => `
+        <a class="video-search-result" href="${lessonUrl}${encodeURIComponent(video.id)}">
+          <span class="video-search-result-icon"><i data-lucide="play-circle" width="18" height="18"></i></span>
+          <span><strong>${escapeHtml(video.title)}</strong><small>${escapeHtml(video.categoryTitle)}${video.description ? " · " + escapeHtml(video.description) : ""}</small></span>
+        </a>`).join("") : '<div class="video-search-empty">No matching videos found. Try another keyword.</div>';
+      if (window.lucide) window.lucide.createIcons({root: results});
+    }
+    input.addEventListener("input", () => render(input.value));
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        const first = $(".video-search-result", results);
+        if (first) location.href = first.href;
+      }
+    });
+    $("#videoSearchClose", overlay).addEventListener("click", close);
+    overlay.addEventListener("click", (event) => { if (event.target === overlay) close(); });
+    function close() { overlay.hidden = true; document.body.style.overflow = ""; }
+    overlay.openSearch = () => {
+      overlay.hidden = false;
+      document.body.style.overflow = "hidden";
+      input.value = "";
+      render("");
+      input.focus();
     };
-
-    const state = {
-      categories: [],
-      activeCategory: "all",
-      query: "",
-      activeVideo: null
-    };
-
-    const $ = (selector) => document.querySelector(selector);
-    const categoryGrid = $("#categoryGrid");
-    const videoGrid = $("#videoGrid");
-    const searchInput = $("#videoSearch");
-    const resultCount = $("#resultCount");
-    const librarySubtitle = $("#librarySubtitle");
-    const watchSection = $("#watch-section");
-    const playerFrame = $("#playerFrame");
-    const toast = $("#toast");
-
-    function safeText(value, fallback = "") {
-      return typeof value === "string" ? value : fallback;
+    return overlay;
+  }
+  function openSearch() { createSearchDialog().openSearch(); }
+  $("#focusSearch")?.addEventListener("click", openSearch);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      const overlay = $("#videoSearchOverlay");
+      if (overlay && !overlay.hidden) { overlay.hidden = true; document.body.style.overflow = ""; }
     }
-
-    function allVideos() {
-      return state.categories.flatMap(category =>
-        (Array.isArray(category.videos) ? category.videos : []).map(video => ({
-          ...video,
-          categoryId: category.id,
-          categoryTitle: category.title
-        }))
-      );
+    if (event.key === "/" && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement?.tagName || "")) {
+      event.preventDefault(); openSearch();
     }
+  });
+})();
+</script>
 
-    function icon(name, size = 18) {
-      return `<i data-lucide="${name}" width="${size}" height="${size}" aria-hidden="true"></i>`;
-    }
-
-    function refreshIcons() {
-      if (window.lucide) window.lucide.createIcons();
-    }
-
-    function showToast(message) {
-      toast.textContent = message;
-      toast.classList.add("visible");
-      window.setTimeout(() => toast.classList.remove("visible"), 2600);
-    }
-
-    function renderCategories() {
-      categoryGrid.replaceChildren();
-
-      const preferredOrder = ["installers", "setup"];
-      const ordered = [...state.categories].sort((a, b) => {
-        const ai = preferredOrder.indexOf(a.id);
-        const bi = preferredOrder.indexOf(b.id);
-        return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
-      });
-
-      if (!ordered.length) {
-        categoryGrid.innerHTML = '<div class="empty-state"><h3>No categories found</h3><p>Add the Installers and Setup categories to data/videos.json.</p></div>';
-        return;
-      }
-
-      ordered.forEach(category => {
-        const presentation = CATEGORY_PRESENTATION[category.id] || {
-          icon: safeText(category.icon, "play-circle"),
-          accent: "#7c3aed",
-          glow: "rgba(124,58,237,.11)",
-          action: "Browse videos"
-        };
-        const count = Array.isArray(category.videos) ? category.videos.length : 0;
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = `category-card${state.activeCategory === category.id ? " active" : ""}`;
-        button.style.setProperty("--card-accent", presentation.accent);
-        button.style.setProperty("--card-glow", presentation.glow);
-        button.setAttribute("aria-pressed", String(state.activeCategory === category.id));
-        button.innerHTML = `
-          <div class="category-top">
-            <span class="category-icon">${icon(presentation.icon, 24)}</span>
-            <span class="category-count">${count} ${count === 1 ? "VIDEO" : "VIDEOS"}</span>
-          </div>
-          <h3>${escapeHtml(safeText(category.title, category.id))}</h3>
-          <p>${escapeHtml(safeText(category.description, "Explore tutorials in this category."))}</p>
-          <div class="category-bottom"><span>${escapeHtml(presentation.action)}</span>${icon("arrow-up-right", 17)}</div>
-        `;
-        button.addEventListener("click", () => {
-          state.activeCategory = category.id;
-          document.querySelectorAll(".filter-tab").forEach(tab => {
-            tab.classList.toggle("active", tab.dataset.filter === category.id);
-          });
-          renderCategories();
-          renderVideos();
-          $("#video-library").scrollIntoView({ behavior: "smooth", block: "start" });
-        });
-        categoryGrid.appendChild(button);
-      });
-      refreshIcons();
-    }
-
-    function escapeHtml(value) {
-      return String(value).replace(/[&<>"']/g, char => ({
-        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
-      })[char]);
-    }
-
-    function getFilteredVideos() {
-      const query = state.query.trim().toLowerCase();
-      return allVideos().filter(video => {
-        const matchesCategory = state.activeCategory === "all" || video.categoryId === state.activeCategory;
-        const tags = Array.isArray(video.tags) ? video.tags.join(" ") : "";
-        const haystack = [
-          video.title, video.description, video.categoryTitle, tags
-        ].map(value => safeText(value)).join(" ").toLowerCase();
-        return matchesCategory && (!query || haystack.includes(query));
-      }).sort((a, b) => (Number(a.order) || 999) - (Number(b.order) || 999));
-    }
-
-    function youtubeId(video) {
-      const raw = safeText(video.youtubeId || video.youtubeUrl || video.url).trim();
-      if (/^[a-zA-Z0-9_-]{11}$/.test(raw)) return raw;
-      try {
-        const url = new URL(raw);
-        if (url.hostname === "youtu.be") return url.pathname.slice(1).split("/")[0];
-        if (url.hostname.endsWith("youtube.com")) {
-          if (url.pathname === "/watch") return url.searchParams.get("v") || "";
-          const parts = url.pathname.split("/").filter(Boolean);
-          const marker = parts.findIndex(part => ["embed", "shorts", "live"].includes(part));
-          if (marker >= 0) return parts[marker + 1] || "";
-        }
-      } catch { /* Not a URL; validation below handles it. */ }
-      return "";
-    }
-
-    function videoThumbnail(video) {
-      const custom = safeText(video.thumbnail).trim();
-      if (custom) return custom;
-      const id = youtubeId(video);
-      return id ? `https://i.ytimg.com/vi/${encodeURIComponent(id)}/hqdefault.jpg` : "";
-    }
-
-    function renderVideos() {
-      const videos = getFilteredVideos();
-      videoGrid.replaceChildren();
-      resultCount.textContent = `${videos.length} ${videos.length === 1 ? "video" : "videos"}`;
-      const category = state.categories.find(item => item.id === state.activeCategory);
-      librarySubtitle.textContent = state.activeCategory === "all"
-        ? "Browse installation and setup tutorials."
-        : `Showing videos in ${category?.title || state.activeCategory}.`;
-
-      if (!videos.length) {
-        const empty = document.createElement("div");
-        empty.className = "empty-state";
-        empty.innerHTML = `${icon("search-x", 28)}<h3>No videos found</h3><p>Try another search term or choose a different category.</p>`;
-        videoGrid.appendChild(empty);
-        refreshIcons();
-        return;
-      }
-
-      videos.forEach(video => {
-        const thumb = videoThumbnail(video);
-        const tags = Array.isArray(video.tags) ? video.tags.slice(0, 3) : [];
-        const card = document.createElement("article");
-        card.className = "video-card";
-        const imageContent = thumb
-          ? `<img src="${escapeHtml(thumb)}" alt="" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><span class="thumb-placeholder" hidden>${icon("play-circle", 38)}</span>`
-          : `<span class="thumb-placeholder">${icon("play-circle", 38)}</span>`;
-        card.innerHTML = `
-          <button class="video-thumb" type="button" aria-label="Play ${escapeHtml(safeText(video.title, "video"))}">
-            ${imageContent}
-            <span class="thumb-play"><span>${icon("play", 22)}</span></span>
-          </button>
-          <div class="video-card-body">
-            <div class="video-tags">${tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>
-            <h3>${escapeHtml(safeText(video.title, "Untitled video"))}</h3>
-            <p>${escapeHtml(safeText(video.description, "Watch this tutorial in Video Academy."))}</p>
-            <div class="video-card-footer">
-              <span class="video-category-label">${escapeHtml(safeText(video.categoryTitle))}</span>
-              <button class="watch-btn" type="button">${icon("play", 14)} Watch video</button>
-            </div>
-          </div>
-        `;
-        const play = () => playSelectedVideo(video);
-        card.querySelector(".video-thumb").addEventListener("click", play);
-        card.querySelector(".watch-btn").addEventListener("click", play);
-        videoGrid.appendChild(card);
-      });
-      refreshIcons();
-    }
-
-    function playSelectedVideo(video) {
-      const id = youtubeId(video);
-      if (!/^[a-zA-Z0-9_-]{11}$/.test(id)) {
-        showToast("This video does not have a valid YouTube ID yet.");
-        return;
-      }
-
-      state.activeVideo = video;
-      playerFrame.replaceChildren();
-      const iframe = document.createElement("iframe");
-      iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?rel=0`;
-      iframe.title = safeText(video.title, "YouTube video player");
-      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-      iframe.allowFullscreen = true;
-      iframe.referrerPolicy = "strict-origin-when-cross-origin";
-      iframe.loading = "lazy";
-      playerFrame.appendChild(iframe);
-
-      $("#playingTitle").textContent = safeText(video.title, "Selected video");
-      $("#playingDescription").textContent = safeText(video.description, "Watch this tutorial.");
-      $("#detailTitle").textContent = safeText(video.title, "Video details");
-      $("#detailDescription").textContent = safeText(video.description, "Watch this tutorial inside the academy.");
-      $("#playingTags").innerHTML = (Array.isArray(video.tags) ? video.tags : [])
-        .map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
-      $("#openYoutube").href = `https://www.youtube.com/watch?v=${encodeURIComponent(id)}`;
-      watchSection.classList.add("visible");
-      refreshIcons();
-      watchSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-
-    async function loadVideoCatalog() {
-      try {
-        const response = await fetch(CATALOG_URL, { cache: "no-cache" });
-        if (!response.ok) throw new Error(`Catalog request failed (${response.status})`);
-        const catalog = await response.json();
-        if (!catalog || !Array.isArray(catalog.categories)) {
-          throw new Error("Catalog must contain a categories array.");
-        }
-        state.categories = catalog.categories
-          .filter(category => ["installers", "setup"].includes(category.id))
-          .map(category => ({
-            ...category,
-            videos: Array.isArray(category.videos) ? category.videos : []
-          }));
-        const count = allVideos().length;
-        $("#totalVideosStat").innerHTML = `Videos: <strong>${count}</strong>`;
-        renderCategories();
-        renderVideos();
-      } catch (error) {
-        console.error("Video catalog could not be loaded:", error);
-        categoryGrid.innerHTML = '<div class="empty-state"><h3>Could not load the catalog</h3><p>Check that data/videos.json exists and is valid JSON, then refresh the page.</p></div>';
-        videoGrid.innerHTML = '<div class="empty-state"><h3>Video library unavailable</h3><p>Run the site through a local web server and confirm the catalog path.</p></div>';
-        resultCount.textContent = "Catalog unavailable";
-        $("#totalVideosStat").innerHTML = 'Videos: <strong>—</strong>';
-      }
-    }
-
-    $("#focusSearch").addEventListener("click", () => {
-      $("#video-library").scrollIntoView({ behavior: "smooth", block: "start" });
-      searchInput.focus({ preventScroll: true });
-    });
-    searchInput.addEventListener("input", () => {
-      state.query = searchInput.value;
-      renderVideos();
-    });
-    document.querySelectorAll(".filter-tab").forEach(tab => {
-      tab.addEventListener("click", () => {
-        state.activeCategory = tab.dataset.filter;
-        document.querySelectorAll(".filter-tab").forEach(item => item.classList.toggle("active", item === tab));
-        renderCategories();
-        renderVideos();
-      });
-    });
-    $("#closePlayer").addEventListener("click", () => {
-      playerFrame.replaceChildren();
-      playerFrame.innerHTML = `<div class="player-placeholder"><div>${icon("youtube", 42)}<p>Select a video from the library to begin.</p></div></div>`;
-      watchSection.classList.remove("visible");
-      state.activeVideo = null;
-      refreshIcons();
-    });
-    $("#themeToggle").addEventListener("click", () => {
-      const root = document.documentElement;
-      const next = root.dataset.theme === "light" ? "dark" : "light";
-      root.dataset.theme = next;
-      const button = $("#themeToggle");
-      button.innerHTML = next === "light" ? icon("moon", 17) : icon("sun", 17);
-      button.setAttribute("aria-label", next === "light" ? "Switch to dark theme" : "Switch to light theme");
-      button.title = next === "light" ? "Switch to dark theme" : "Switch to light theme";
-      refreshIcons();
-    });
-    document.addEventListener("keydown", event => {
-      if (event.key === "/" && !["INPUT", "TEXTAREA"].includes(document.activeElement?.tagName)) {
-        event.preventDefault();
-        $("#video-library").scrollIntoView({ behavior: "smooth", block: "start" });
-        searchInput.focus({ preventScroll: true });
-      }
-      if (event.key === "Escape" && watchSection.classList.contains("visible")) {
-        $("#closePlayer").click();
-      }
-    });
-
-    // Eight-slide homepage showcase: each slide advances automatically after 7 seconds.
-    const showcaseSlides = Array.from(document.querySelectorAll(".showcase-slide"));
-    const showcaseDots = $("#showcaseDots");
-    const showcaseCounter = $("#showcaseCounter");
-    const showcaseProgress = $("#showcaseProgress");
-    const showcasePause = $("#showcasePause");
-    const showcase = document.querySelector(".showcase");
-    const SHOWCASE_DURATION = 7000;
-    let showcaseIndex = 0;
-    let showcaseElapsed = 0;
-    let showcaseLastTick = Date.now();
-    let showcasePaused = false;
-    let showcaseTimer = null;
-
-    showcaseSlides.forEach((slide, index) => {
-      const dot = document.createElement("button");
-      dot.type = "button";
-      dot.className = `showcase-dot${index === 0 ? " is-active" : ""}`;
-      dot.setAttribute("aria-label", `Show homepage slide ${index + 1}`);
-      dot.addEventListener("click", () => showShowcaseSlide(index));
-      showcaseDots.appendChild(dot);
-    });
-
-    function showShowcaseSlide(index) {
-      showcaseIndex = (index + showcaseSlides.length) % showcaseSlides.length;
-      showcaseElapsed = 0;
-      showcaseLastTick = Date.now();
-      showcaseSlides.forEach((slide, i) => {
-        slide.classList.toggle("is-active", i === showcaseIndex);
-        slide.setAttribute("aria-hidden", i === showcaseIndex ? "false" : "true");
-      });
-      Array.from(showcaseDots.children).forEach((dot, i) => {
-        dot.classList.toggle("is-active", i === showcaseIndex);
-        dot.setAttribute("aria-current", i === showcaseIndex ? "true" : "false");
-      });
-      showcaseCounter.textContent = `${String(showcaseIndex + 1).padStart(2, "0")} / ${String(showcaseSlides.length).padStart(2, "0")}`;
-      showcaseProgress.style.width = "0%";
-      refreshIcons();
-    }
-
-    function updateShowcaseProgress() {
-      if (!showcasePaused && !document.hidden) {
-        const now = Date.now();
-        showcaseElapsed += Math.min(now - showcaseLastTick, 250);
-        showcaseLastTick = now;
-        if (showcaseElapsed >= SHOWCASE_DURATION) {
-          showShowcaseSlide(showcaseIndex + 1);
-        } else {
-          showcaseProgress.style.width = `${(showcaseElapsed / SHOWCASE_DURATION) * 100}%`;
-        }
-      } else {
-        showcaseLastTick = Date.now();
-      }
-    }
-    showcaseTimer = window.setInterval(updateShowcaseProgress, 100);
-    $("#showcasePrev").addEventListener("click", () => showShowcaseSlide(showcaseIndex - 1));
-    $("#showcaseNext").addEventListener("click", () => showShowcaseSlide(showcaseIndex + 1));
-    showcasePause.addEventListener("click", () => {
-      showcasePaused = !showcasePaused;
-      showcasePause.innerHTML = icon(showcasePaused ? "play" : "pause", 16);
-      showcasePause.setAttribute("aria-label", showcasePaused ? "Resume autoplay" : "Pause autoplay");
-      showcasePause.title = showcasePaused ? "Resume autoplay" : "Pause autoplay";
-      showcaseLastTick = Date.now();
-      refreshIcons();
-    });
-    showcase.addEventListener("mouseenter", () => { showcasePaused = true; showcaseLastTick = Date.now(); });
-    showcase.addEventListener("mouseleave", () => { showcasePaused = false; showcaseLastTick = Date.now(); });
-    showcase.addEventListener("focusin", () => { showcasePaused = true; showcaseLastTick = Date.now(); });
-    showcase.addEventListener("focusout", () => { showcasePaused = false; showcaseLastTick = Date.now(); });
-    document.addEventListener("visibilitychange", () => { showcaseLastTick = Date.now(); });
-    document.querySelectorAll("[data-hero-filter]").forEach(link => {
-      link.addEventListener("click", () => {
-        const filter = link.dataset.heroFilter;
-        if (!filter) return;
-        state.activeCategory = filter;
-        document.querySelectorAll(".filter-tab").forEach(tab => tab.classList.toggle("active", tab.dataset.filter === filter));
-        renderCategories();
-        renderVideos();
-      });
-    });
-
-        $("#currentYear").textContent = new Date().getFullYear();
-    refreshIcons();
-    loadVideoCatalog();
-  </script>
 </body>
 </html>
