@@ -41,7 +41,7 @@
           "title": "Google Gemini API Setup",
           "description": "Learn how to create a Gemini API key and configure it for your AI projects.",
           "category": "setup",
-          "youtubeId": "z9XJ3g7bLds",
+          "youtubeId": "EuU0olKxfY8",
           "duration": "05:30",
           "tags": ["Gemini", "API", "Setup"]
         },
@@ -50,7 +50,7 @@
          "title": "Groq API Setup",
           "description": "Learn how to obtain and configure a Groq API key.",
           "category": "setup",
-          "youtubeId": "fQzv0du_pEY",
+          "youtubeId": "kWEEheDRWOw",
           "duration": "04:45",
           "tags": ["Groq", "API", "Setup"]
        },
@@ -59,7 +59,7 @@
   "title": "How to Install requirements.txt",
   "description": "Learn how to install all Python project dependencies using the requirements.txt file.",
   "category": "setup",
-  "youtubeId": "X8uWW5W3o_M",
+  "youtubeId": "YIoih3WUnZ4",
   "duration": "05:30",
   "tags": ["Python", "Requirements", "Dependencies", "Installation"]
 },
@@ -68,7 +68,7 @@
   "title": "How to Generate an OpenRouter API Key",
   "description": "Learn how to generate an OpenRouter API key and configure it for your AI applications.",
   "category": "setup",
-  "youtubeId": "ln29dlyWQNg",
+  "youtubeId": "EbGIUIKTcoU",
   "duration": "04:45",
   "tags": ["OpenRouter", "API Key", "AI", "Setup"]
 },
@@ -77,7 +77,7 @@
   "title": "How to Generate an NVIDIA API Key",
   "description": "Learn how to obtain an NVIDIA API key and configure it for AI model integration.",
   "category": "setup",
-  "youtubeId": "cfPloIzrtME",
+  "youtubeId": "UL9EShOHc7U",
   "duration": "05:00",
   "tags": ["NVIDIA", "API Key", "AI Models", "Setup"]
 }
